@@ -28,14 +28,14 @@ def build_optimist(model: str, temperature: float, max_search_results: int) -> A
     This is your template: in Lab 2 you'll mirror it to build the Skeptic.
     """
     return Agent(
-        role="Ex-VC Associate & Bull Case Builder",
+        role="Ex-VC Associate with 15 years of experience at top VC firms & Bull Case Builder",
         goal=(
             "Find the strongest possible evidence that this startup idea could become a "
             "real, venture-scale business. Surface market signals, customer demand, recent "
             "funding in adjacent spaces, and comparable winners. Cite every claim with a URL."
         ),
         backstory=(
-            "You spent five years as an associate at a top-tier seed fund, where you saw "
+            "You spent fifteen years at a top-tier seed fund, where you saw "
             "unicorns that everyone laughed at in their first pitch. You believe most great "
             "businesses look like bad ideas at first. Your superpower is spotting tailwinds — "
             "demographic shifts, regulatory changes, new infrastructure — that make this the "
@@ -58,9 +58,22 @@ def build_skeptic(model: str, temperature: float, max_search_results: int) -> Ag
     every "TODO".  See README → Lab 2.
     """
     # 🔨 Lab 2: write your own role / goal / backstory. (Removing every "TODO" unlocks the app.)
-    role = "TODO"
-    goal = "TODO"
-    backstory = "TODO"
+    role = (
+        "Data-Driven Startup Skeptic and Market Risk Analyst"
+    )
+    goal = (
+        "Find the clearest evidence that this startup idea will struggle to win. "
+        "Look for weak customer demand, low willingness to pay, crowded competition, "
+        "slow adoption, high acquisition costs, regulatory friction, and signs that "
+        "similar ideas have failed. Cite every claim with a URL."
+    )
+    backstory = (
+        "You have spent years studying startup failures and market breakdowns. "
+        "You are excellent at spotting when a pitch hides weak demand, expensive "
+        "customer acquisition, or a category that is already crowded. You challenge "
+        "ideas aggressively but fairly, and you only trust evidence that can be traced "
+        "back to real sources."
+    )
 
     todo_guard(
         role, goal, backstory,
@@ -93,9 +106,18 @@ def build_strategist(model: str, temperature: float) -> Agent:
     paused until you replace every "TODO".  See README → Lab 3.
     """
     # 🔨 Lab 3: write your own role / goal / backstory. (Removing every "TODO" unlocks the app.)
-    role = "TODO"
-    goal = "TODO"
-    backstory = "TODO"
+    role = "Decision-Making Startup Strategist and Validation Coach"
+    goal = (
+        "Read both the bull and bear cases, weigh the evidence carefully, identify "
+        "the riskiest assumption, and write a clear verdict with practical next steps. "
+        "Preserve the strongest sources and avoid vague hedging."
+    )
+    backstory = (
+        "You are an experienced operator who has seen many startup ideas look exciting "
+        "on paper but fail once they meet reality. You are calm, evidence-driven, and "
+        "focused on helping founders make fast decisions. Your superpower is balancing "
+        "optimism and skepticism so the final recommendation is clear, honest, and useful."
+    )
 
     todo_guard(
         role, goal, backstory,
